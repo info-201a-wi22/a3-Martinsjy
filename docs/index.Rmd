@@ -1,0 +1,47 @@
+---
+title: "A3 report"
+author: "Jiayang Sun"
+date: "2/18/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../source/analysis.R")
+```
+## Introduction
+
+I choose to analysis I choose to analyze the white_in_jail, which is the population of white people in jail
+and aapi_in_jail variable, which is the population of Asian Americans in jail
+
+## Summary
+
+The average value of white jail population across all the counties in 2018 is `r ave_white_in_jail`.
+The highest number of the white jail population across the counties is `r highest_white_in_jail` in 2018.
+The average value of Asian American/Pacific Islander jail population in jail across all the counties in 2018 is `r ave_aapi_jail`.
+The highest number of Asian American jail population across the counties is `r highest_aapi_in_jail` in 2018.
+The Number of white in jail in 2018 in Washington, WA is `r white_in_jail_2018_WA`. 
+
+## Trends over time chart
+
+```{r plot1, echo=FALSE}
+plot(white_trends)
+```
+
+This plot shows the trend for white jail population in the Washington state variation from 1970 to 2020, The plot show that this population varies up and down dramatically
+
+## Variable comparison chart
+
+```{r plot2, echo=FALSE}
+plot(white_aapi_com)
+```
+
+This second plot compare the two variable I choose, which is white jail population and Asian American jail population from 1970 to 2020. The overall number of white jail population are a lot bigger than Asian American jail population. Asian American jail population reached peak in 1990 to 2000 period and white population has its highest in 1993.
+
+## Map
+
+```{r plot3, echo=FALSE}
+plot(plot)
+```
+
+This map shows the number of white jail population across counties in U.S. in 2018, the part of map with grey shows there are smaller white jail population in 2018 and red with more white jail population 
